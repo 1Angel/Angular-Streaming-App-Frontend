@@ -1,0 +1,15 @@
+<div class="video-container">
+  <h1>{{video?.title | titlecase}}</h1>
+  <p>{{video?.description |titlecase}}</p>
+  <div>
+    <video width="1000" height="500" controls [src]="video?.videoUrl"></video>
+  </div>
+
+  <div class="comment">
+    <br>
+    <br>
+    <h3>Comments...</h3>
+
+  </div>
+
+</div>

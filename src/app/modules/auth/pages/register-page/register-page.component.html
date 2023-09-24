@@ -1,0 +1,40 @@
+<div class="container">
+  <form>
+    <h1>Register</h1>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="username" type="text">
+        <mat-icon>person</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" type="email">
+        <mat-icon>email</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password">
+        <mat-icon>password</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button mat-button color="primary">
+        <mat-icon>login</mat-icon>
+        Register
+      </button>
+    </div>
+    <div>
+      <a [routerLink]="['/auth/login']">Ya tienes una cuenta? Inicia sesion aqui</a>
+    </div>
+  </form>
+
+</div>

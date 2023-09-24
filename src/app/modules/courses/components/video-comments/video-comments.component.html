@@ -1,0 +1,12 @@
+<div class="comment-container">
+  <mat-list class="example-list-wrapping">
+    <mat-list-item lines="3" *ngFor="let comments of video?.videoComments">
+      <h3>Created by: {{comments.user.username | titlecase}}</h3>
+      <span>
+       {{comments.description}}
+      </span>
+      <h6>Created date: {{comments.createdAt| date}}</h6>
+      <hr>
+    </mat-list-item>
+  </mat-list>
+</div>

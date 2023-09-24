@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a mat-button routerLink=""  routerLinkActive="active-link"><mat-icon>home</mat-icon>Home</a>
+    <a mat-button routerLinkActive="active-link" [routerLink]="['/courses']"><mat-icon>code</mat-icon>Courses</a>
+    <a mat-button routerLinkActive="active-link" [routerLink]="['/about']"><mat-icon>info</mat-icon>About us</a>
+
+    <span class="example-spacer"></span>
+    <a mat-button [routerLink]="['/auth/login']" routerLinkActive="active-link" *ngIf="!loggedIn()">
+      <mat-icon>login</mat-icon>
+      Login
+    </a>
+    <a mat-button [routerLink]="['/auth/register']"  *ngIf="!loggedIn()">
+      <mat-icon>person_add</mat-icon>
+      Register
+    </a>
+    <a mat-button (click)="logout()"  *ngIf="loggedIn()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>

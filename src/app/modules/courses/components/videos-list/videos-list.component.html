@@ -1,0 +1,10 @@
+<div>
+  <mat-list role="list" *ngFor="let lista of courseInfo?.videos let i = index">
+    <hr>
+    <mat-list-item role="listitem" [routerLink]="['/courses/lesson', lista.id]">
+      <span>{{i+1}} - {{lista.title | titlecase}}</span>
+      <p>{{lista.description | titlecase}}</p>
+    </mat-list-item>
+  </mat-list>
+
+</div>

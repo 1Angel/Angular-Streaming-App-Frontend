@@ -1,0 +1,20 @@
+.example-list-wrapping {
+  max-width: 500px;
+}
+
+span{
+  color: black;
+  cursor: pointer;
+}
+
+p{
+  color: black;
+  cursor: pointer;
+}
+
+
+div{
+  border-radius: 5px;
+  border-color: black;
+  margin: 8%;
+}
