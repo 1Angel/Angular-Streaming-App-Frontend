@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { LoginResponse, User } from '../interfaces/login-reponse.interface';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
+import { RegisterResponse } from '../interfaces/Register-response.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,16 @@ export class AuthService {
       })
     )
   };
+
+  Register(username: string, email: string, password: string): Observable<boolean>{
+    return this.http.post<RegisterResponse>(`${this.apiURL}/auth/create`, {username, email, password})
+    .pipe(
+      map(({userData})=> this.setAuthentication(userData.user, userData.access_token)),
+      catchError(err=>{
+        return throwError(()=>err.message)
+      })
+    )
+  }
 
   logout(){
     localStorage.clear();

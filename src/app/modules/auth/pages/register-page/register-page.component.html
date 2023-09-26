@@ -1,11 +1,11 @@
 <div class="container">
-  <form>
+  <form [formGroup]="myForm" (ngSubmit)="Register()">
     <h1>Register</h1>
 
     <div>
       <mat-form-field>
         <mat-label>Username</mat-label>
-        <input matInput placeholder="username" type="text">
+        <input matInput placeholder="username" type="text" formControlName="username">
         <mat-icon>person</mat-icon>
       </mat-form-field>
     </div>
@@ -13,7 +13,7 @@
     <div>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" type="email">
+        <input matInput placeholder="Email" type="email" formControlName="email">
         <mat-icon>email</mat-icon>
       </mat-form-field>
     </div>
@@ -21,7 +21,7 @@
     <div>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Password" type="password">
+        <input matInput placeholder="Password" type="password" formControlName="password">
         <mat-icon>password</mat-icon>
       </mat-form-field>
     </div>
