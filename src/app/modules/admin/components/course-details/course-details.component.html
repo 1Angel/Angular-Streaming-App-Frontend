@@ -1,0 +1,12 @@
+<div class="video-container">
+  <mat-list class="example-list-wrapping">
+    <mat-list-item *ngFor="let course of CourseInfo?.videos">
+      <h3>{{course.title | titlecase}}</h3>
+      <span>
+       {{course.description}}
+      </span>
+      <h6>Created date: {{course.created | date}}</h6>
+      <hr>
+    </mat-list-item>
+  </mat-list>
+</div>

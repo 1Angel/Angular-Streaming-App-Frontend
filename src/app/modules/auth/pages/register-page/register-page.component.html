@@ -7,6 +7,8 @@
         <mat-label>Username</mat-label>
         <input matInput placeholder="username" type="text" formControlName="username">
         <mat-icon>person</mat-icon>
+        <br>
+        <span *ngIf="myForm.controls['username'].getError('required') && myForm.controls['username'].touched">Este campo es obligatorio</span>
       </mat-form-field>
     </div>
 
@@ -15,6 +17,8 @@
         <mat-label>Email</mat-label>
         <input matInput placeholder="Email" type="email" formControlName="email">
         <mat-icon>email</mat-icon>
+        <br>
+        <span *ngIf="myForm.controls['email'].getError('required') && myForm.controls['email'].touched">Este campo es obligatorio</span>
       </mat-form-field>
     </div>
 
@@ -23,6 +27,8 @@
         <mat-label>Password</mat-label>
         <input matInput placeholder="Password" type="password" formControlName="password">
         <mat-icon>password</mat-icon>
+        <br>
+        <span *ngIf="myForm.controls['password'].getError('required') && myForm.controls['password'].touched">Este campo es obligatorio</span>
       </mat-form-field>
     </div>
 

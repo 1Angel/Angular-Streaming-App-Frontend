@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatFormFieldModule,
 
     SharedModule,
   ],
