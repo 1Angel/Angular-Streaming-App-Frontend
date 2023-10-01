@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
+    HomeModule,
 
     SharedModule,
   ],

@@ -12,7 +12,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { VideoCommentsComponent } from './components/video-comments/video-comments.component';
-
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,11 +30,15 @@ import { VideoCommentsComponent } from './components/video-comments/video-commen
   imports: [
     CommonModule,
     CoursesRoutingModule,
+    ReactiveFormsModule,
 
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule
   ]
 })
 export class CoursesModule { }

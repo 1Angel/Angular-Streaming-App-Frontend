@@ -1,3 +1,13 @@
+*{
+  text-align: center;
+
+}
+
 .videoua{
   text-align: center;
+}
+
+.comments{
+  margin-left: 245px;
+ display: flex;
 }

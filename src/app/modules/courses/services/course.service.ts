@@ -28,4 +28,8 @@ export class CourseService {
     return this.http.get<VideoDetails>(`${this.apiURL}/videos/${id}`)
   }
 
+
+  CreateVideoComments(id: number | undefined, description: string){
+    return this.http.post(`http://localhost:3000/api/videos-comments/create/1`, {description});
+  }
 }
