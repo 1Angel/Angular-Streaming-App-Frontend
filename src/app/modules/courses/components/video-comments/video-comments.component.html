@@ -1,14 +1,17 @@
-<div class="comment-container">
+<div>
   <form [formGroup]="myForm" (ngSubmit)="CreateComment()">
     <div class="mb-3">
       <label for="basic-url" class="form-label">Create new Comments</label>
       <div class="input-group">
         <input formControlName="description" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-        <button type="submiti" class=" btn btn-primary">Create</button>
+        <button type="submit" class=" btn btn-primary">Create</button>
       </div>
       <div class="form-text" id="basic-addon4"></div>
     </div>
   </form>
+</div>
+
+<div class="comment-container">
   <mat-list class="example-list-wrapping">
     <mat-list-item lines="3" *ngFor="let comments of video?.videoComments">
       <h3><b>{{comments.user.username | titlecase}}</b></h3>

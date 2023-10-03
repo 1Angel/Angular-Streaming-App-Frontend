@@ -1,9 +1,5 @@
-.grid{
-  margin-left: 50px;
-}
-
-.example-card {
-
-  width: 450px;
-  padding: 25px;
+#list{
+  padding-top: 30px;
+  margin-left: 150px;
+  padding-bottom: 60px;
 }

@@ -29,7 +29,7 @@ export class CourseService {
   }
 
 
-  CreateVideoComments(id: number | undefined, description: string){
-    return this.http.post(`http://localhost:3000/api/videos-comments/create/1`, {description});
+  CreateVideoComments(id: number, description: string){
+    return this.http.post(`${this.apiURL}/videos-comments/create/${id}`, {description});
   }
 }

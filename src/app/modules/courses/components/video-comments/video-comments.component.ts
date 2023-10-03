@@ -15,7 +15,7 @@ export class VideoCommentsComponent implements OnInit{
   @Input()
   public video?: VideoDetails;
 
-  public id?: number;
+  public id: number=0;
 
   constructor(private courseService: CourseService,
     private route: ActivatedRoute,
@@ -31,12 +31,13 @@ export class VideoCommentsComponent implements OnInit{
   ngOnInit(): void {
     this.route.params.subscribe(params=>{
       this.id = +params['id']
+      console.log(this.id);
     });
   }
 
 
   CreateComment(){
-    const myid: number | undefined = this.id;
+    const myid: number= this.id;
     const {description} = this.myForm.value;
     this.courseService.CreateVideoComments(myid, description);
     console.log(this.myForm.value, myid)

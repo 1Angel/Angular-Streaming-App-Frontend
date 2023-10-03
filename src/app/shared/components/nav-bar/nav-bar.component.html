@@ -13,7 +13,7 @@
       <mat-icon>person_add</mat-icon>
       Register
     </a>
-    <h6 *ngIf="loggedIn()">Hello: {{user.username}}</h6>
+    <h6 *ngIf="loggedIn()">Hello: {{user.username | titlecase}}</h6>
     <br>
     <a mat-button (click)="logout()"  *ngIf="loggedIn()">
       <mat-icon>logout</mat-icon>

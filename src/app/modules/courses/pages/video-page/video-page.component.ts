@@ -24,7 +24,6 @@ export class VideoPageComponent implements OnInit{
       switchMap(({id})=> this.courseService.getVideobyId(id))
     ).subscribe(video=>{
       this.videoInfo = video;
-      console.log(this.videoInfo)
     })
   }
 
